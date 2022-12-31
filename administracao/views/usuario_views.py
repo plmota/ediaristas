@@ -15,4 +15,4 @@ def cadastrar_usuario(request):
 def listar_usuarios(request):
     User = get_user_model()
     usuarios = User.objects.filter(is_superuser=True)
-    return render(request, 'usuarios/lista_usuarios.html', {'usuario': usuarios})
+    return render(request, 'usuarios/lista_usuarios.html', {'usuarios': usuarios})
